@@ -17,3 +17,19 @@ ALTER TABLE job_postings_fact ADD CONSTRAINT fk_company_id FOREIGN KEY (company_
 ALTER TABLE skills_job_dim ADD CONSTRAINT fk_job_id FOREIGN KEY (job_id) REFERENCES job_postings_fact(job_id);
 
 ALTER TABLE skills_job_dim ADD CONSTRAINT fk_skill_id FOREIGN KEY (skill_id) REFERENCES skills_dm(skill_id);
+
+
+--Faced an error "value too long for type character varying(50)", therefore, altering the length of the column
+
+ALTER TABLE job_postings_fact 
+    ALTER COLUMN job_title_short TYPE VARCHAR(555),
+    ALTER COLUMN job_title TYPE VARCHAR(555),
+    ALTER COLUMN job_location TYPE VARCHAR(555),
+    ALTER COLUMN job_via TYPE VARCHAR(555),
+    ALTER COLUMN job_schedule_type TYPE VARCHAR(555);
+
+
+--Faced an error "value too long for type character varying(20)", therefore, altering the length of the column
+
+ALTER TABLE company_dim
+    ALTER COLUMN name TYPE VARCHAR(5555);
