@@ -34,7 +34,8 @@ This project aimed to uncover key trends and insights into the job market using 
 
 To identify the most lucrative positions, I focused on analyzing job postings with the highest annual salaries across various locations and industries. By filtering for positions offering remote flexibility, the query revealed which roles are the most financially rewarding in the modern job market.
 
-``` /*
+```
+/*
 Question: What are the top-paying data analyst jobs?
 - Identify the top 10 highest-paying Data Analyst roles that are available remotely
 - Focuses on job postings with specified salaries (remove nulls)
@@ -82,7 +83,8 @@ LIMIT 10;
 ## 2. Skills for High-Salary Jobs 🛠️
 Next, I explored the specific skills associated with top-paying positions. By joining job postings with skill requirements, I identified the critical capabilities employers value for well-compensated roles.
 
-```/*
+```
+/*
 Question: What skills are required for the top-paying data analyst jobs?
 - Use the top 10 highest-paying Data Analyst jobs from first query
 - Add the specific skills required for these roles
@@ -123,7 +125,8 @@ ORDER BY salary_year_avg DESC;
 ## 3. Most In-Demand Skills 📈
 
 Understanding demand is key to identifying valuable skills for job seekers. This query revealed the most frequently requested skills in the dataset.
-```/*
+```
+/*
 Question: What are the most in-demand skills for data analysts?
 - Join job postings to inner join table similar to query 2
 - Identify the top 5 in-demand skills for a data analyst.
